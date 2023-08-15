@@ -1,0 +1,20 @@
+@mixin before_circle {
+    &::before {
+        content: '';
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        border-radius: 100%;
+        top: -25%;
+        left: 0;
+        z-index: -1;
+        background: $main-color;
+    }
+}
+
+@mixin hoveref {
+    transition: 0.5s all;
+    &:hover {
+        box-shadow: 3px 3px 20px #fff;
+    }
+}

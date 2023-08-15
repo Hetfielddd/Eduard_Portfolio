@@ -1,0 +1,42 @@
+.promo {
+    min-height: 800px;
+    position: relative;
+    background: url('../img/main_bg1.png') no-repeat 50%/cover;
+    padding-top: 205px;
+    &__subtitle {
+        position: relative;
+        padding-left: 10px;
+        width: 200px;
+        color: #fff;
+        z-index: 2;
+        @include before_circle;
+    }
+    &__title {
+        color: #fff;
+        margin-top: 10px;
+    }
+    &__btns {
+        display: flex;
+        width: 256px;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 25px;
+    }
+    &__btn {
+        box-shadow: none;
+    }
+    &__link {
+        color: rgb(240, 240, 240);
+        &:hover {
+            text-decoration: none;
+            color: #000
+        }
+        &_white {
+            color: #fff;
+            &:hover {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+}
