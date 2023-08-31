@@ -14,3 +14,10 @@ closeElem.addEventListener('click', () => {
 overlayElem.addEventListener('click', () => {
     menu.classList.remove('active');
 });
+
+const counters = document.querySelectorAll('.skills__stats-procentage'),
+        lines = document.querySelectorAll('.skills__stats-filled');
+
+counters.forEach((item, i) => {
+    lines[i].style.width = item.innerHTML;
+});
