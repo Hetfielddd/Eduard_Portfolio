@@ -1,13 +1,16 @@
 .sidepanel {
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: column;
+    width: 28px;
+    border-radius: 1px;
     top: 220px;
     left: 20px;
     justify-content: space-between;
     align-items: center;
     height: 350px;
     z-index: 3;
+    padding-top: 16px;
     &__icons {
         display: flex;
         height: 90px;
@@ -18,6 +21,7 @@
         width: 2px;
         height: 70px;
         background-color: #fff;
+        margin-top: 25px;
     }
     &__text {
         width: 25px;
@@ -26,7 +30,7 @@
         font-size: 16px;
         span {
             display: block;
-            transform: rotate(-90deg) translate(-25%, -209%);
+            transform: rotate(-90deg) translate(-40%, -209%);
             height: 25px;
             width: 130px;
         }
