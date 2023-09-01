@@ -1,0 +1,255 @@
+@media (max-width: 1399px)
+    .menu
+        &_item
+            padding-right: 29px
+    .advantages
+        &_descr
+            width: 300px
+        &_item
+            align-items: flex-start
+
+@media (max-width: 1199px)
+    .menu
+        &_item
+           padding-right: 19px 
+        &_link
+            font-size: 13px
+    .promo
+        &_header
+            font-size: 50px
+        &_subheader
+            font-size: 30px
+    .advantages
+        &_descr
+            width: 300px
+        &_item
+            align-items: flex-start
+    .mobile
+        &_item
+            width: 290px
+            height: 253px	
+
+    .footer
+        &_wrapper > div 
+            width: 50%
+            &:nth-child(1)
+                width: 25%
+            &:nth-child(3)
+                width: 25%
+                display: flex 
+                justify-content: flex-end
+        &_mobile
+            display: flex
+            a 
+                margin: 0 3px
+                img 
+                    width: 100%
+            
+
+@media (max-width: 991px)
+    nav
+        height: 35px
+    .menu
+        height: 35px
+        &_item
+           padding-right: 10px 
+        &_link
+            font-size: 10px
+    .subheader
+        margin-top: 35px
+        height: 73px
+        &_logo
+            img
+                width: 100%
+        &_official
+            font-size: 10px
+        &_phone
+            font-size: 18px
+        &_btn
+            width: 100%
+            height: 40px
+            margin-top: 23px
+    .promo
+        &_header
+            font-size: 40px
+        &_subheader
+            font-size: 25px
+    .advantages
+        &_item
+            flex-direction: column
+            align-items: center
+        &_descr
+            margin-top: 20px
+            text-align: center
+        &_round
+            margin: 0
+            
+    .choice
+        img
+            width: 100%
+    .footer
+        &_wrapper
+            flex-wrap: wrap
+        &_wrapper > div 
+            width: 100%
+            display: flex 
+            justify-content: center
+            margin-bottom: 20px
+            &:nth-child(1)
+                width: 100%
+                order: 2
+            &:nth-child(2)
+                order: 1
+            &:nth-child(3)
+                order: 3
+                width: 100%
+                justify-content: center
+    
+@media (max-width: 767px)
+    nav
+        height: 35px
+    .menu
+        position: fixed
+        flex-direction: column
+        top: 0
+        left: -100%
+        height: 100vh
+        padding: 20px 15px
+        background-color: rgba(0,0,0,.6)
+        transition: 0.6s all
+        &_active
+            left: 0
+        &_item
+            padding-right: 0
+            border: none
+            margin: 10px
+        &_link
+            font-size: 20px
+    .hamburger
+        display: block
+        position: absolute
+        right: 10px
+        top: 50%
+        transform: translateY(-50%)
+        width: 26px
+        height: 12px
+        span
+            display: block
+            height: 2px
+            width: 100%
+            background-color: #fff
+            margin-bottom: 2px
+            transition: 0.5s all
+        &_active
+            span
+                margin-bottom: -2px
+                &:nth-child(1)
+                    transform: translateY(3px) rotate(-45deg)
+                &:nth-child(2)
+                    display: none
+                &:nth-child(3)
+                    transform: translateY(3px) rotate(45deg)
+    .xs-hidden
+        display: none
+    .xs-visible
+         display: block          
+    .subheader
+        margin-top: 35px
+        &_phone
+            display: block
+            margin-top: 10px
+            color: #fff
+            font-size: 16px
+            font-weight: 400
+            text-transform: uppercase
+            text-align: center
+        &_btn
+            width: 200px
+            height: 40px
+            margin: 0 auto
+            margin-top: 10px
+    .promo
+        line-height: 45px
+
+@media (max-width: 575px)
+    nav
+        height: 31px
+    .subheader
+        height: 60px
+        margin-top: 31px
+        &_official
+            display: none
+        &_phone
+            font-weight: 400
+            font-size: 12px
+        &_btn
+            width: 116px
+            height: 22px
+            font-size: 11px
+    .promo
+        min-height: 400px
+        padding: 41px 0 34px 0
+        &_header
+            font-size: 30px
+            padding: 0 24px
+            line-height: 35px
+        &_descr
+            display: none
+        &_btn
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 210px
+            height: 50px
+            margin: 73px auto 0
+            font-weight: 400
+            font-size: 16px
+    .mobile
+        &_item
+            width: 290px
+            height: 254px
+    .title
+        font-size: 16px
+        margin-top: 18px
+    .advantages
+        &_round
+            margin-top: 24px
+        &_item
+            margin-top: 0
+    .choice
+        min-height: 393px
+        background-image: none
+        background: #070716
+        padding: 25px 0 31px 0
+        &_text
+            color: #fff
+    footer 
+        padding: 25px 0 20px 0
+    .footer 
+        &_divider
+            width: 253px
+            margin: 0 auto
+        &_wrapper
+            padding-top: 22px
+        &_wrapper > div 
+            margin-bottom: 20px
+            &:nth-child(1)
+                order: 2
+            &:nth-child(2)
+                order: 1
+            &:nth-child(3)
+                order: 3
+        &_links 
+            width: 290px 
+            &_main 
+                padding: 0
+                font-size: 14px
+            &_sub 
+                width: 290px
+                flex-wrap: wrap
+                justify-content: center
+                a 
+                    margin: 0 7px
+            &_lang 
+                margin-top: 10px
+     
