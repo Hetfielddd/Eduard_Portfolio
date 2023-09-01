@@ -1,16 +1,18 @@
 .sidepanel {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     width: 28px;
-    border-radius: 1px;
-    top: 220px;
+    border-radius: 4px;
+    top: 50%;
+    transform: translateY(-50%);
     left: 20px;
     justify-content: space-between;
     align-items: center;
     height: 350px;
     z-index: 3;
     padding-top: 16px;
+    background-color: rgba(0,0,0,.7);
     &__icons {
         display: flex;
         height: 90px;
