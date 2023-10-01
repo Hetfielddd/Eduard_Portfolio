@@ -1,24 +1,32 @@
 .promo {
     min-height: 800px;
     position: relative;
-    background: url('../img/main_bg1.png') no-repeat 50%/cover;
+    background: url('../img/main_google_bg.jpg') no-repeat 50%/cover;
     padding-top: 205px;
     &__subtitle {
         position: relative;
-        padding-left: 10px;
-        width: 200px;
+        text-align: right;
+        padding-right: 10px;
         color: #fff;
         z-index: 2;
         @include before_circle;
+        &:before {
+            left: auto;
+            right: -4px;
+        }
     }
     &__title {
         color: #fff;
         margin-top: 10px;
+        text-align: right;
     }
     &__btns {
+        position: absolute;
+        right: 20px;
         display: flex;
         width: 256px;
         justify-content: space-between;
+        justify-self: right;
         align-items: center;
         margin-top: 25px;
     }

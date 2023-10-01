@@ -70,6 +70,9 @@
     .container {
         max-width: 720px;
     }
+    .promo {
+        background: url('../img/main_google_bg.jpg') no-repeat 20%/cover;
+    }
     .title {
         &_fz36 {
             font-size: 30px;
@@ -142,6 +145,11 @@
     .container {
         max-width: 540px;
     }
+    .menu {
+        &__social {
+            bottom: 80px;
+        }
+    }
     .title {
         &_fz48 {
             font-size: 40px;
@@ -155,6 +163,10 @@
         }
         &__photo {
             grid-row: unset;
+            img{
+                display: none;
+            }
+            background: url('../img/767px.jpg') center center/cover no-repeat ;
         }
         &__skills {
             grid-template-columns: repeat(2, 260px);
@@ -204,10 +216,10 @@
 
     .promo {
         height: 640px;
-        background: url('../img/main_bg1.png') no-repeat 60%/cover;
+        background: url('../img/main_google_bg.jpg') no-repeat 20%/cover;
     }
     .promo__title {
-        width: 300px;
+        text-align: right;
         font-size: 26px;
         line-height: 27px;
     }
@@ -309,6 +321,13 @@
         }
         &__policy {
             grid-row: 1 / 2;
+            position: relative;
+            label.error {
+                position: absolute;
+                top: -22px;
+                left: -2px; 
+                color: rgba(256, 0, 0, 0.7);
+            }
         }
     } 
 }

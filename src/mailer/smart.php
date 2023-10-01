@@ -18,7 +18,7 @@ $mail->Password = 'divupqdiinjshjsu';                           // Наш пар
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
-$mail->setFrom('edwardodinio@gmail.com', 'MyPortfolio');   // От кого письмо 
+$mail->setFrom('edwardodinio@gmail.com', 'Eduard Portfolio');   // От кого письмо 
 $mail->addAddress('edwarovich@gmail.com');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
@@ -33,7 +33,8 @@ $mail->Body    = '
 		Пользователь оставил данные <br> 
 	Имя: ' . $name . '<br>
 	E-mail: ' . $email . '<br>
-	Сообщение: ' .$message . '';
+	Сообщение: ' . $message . '';
+	
 
 if(!$mail->send()) {
     return false;

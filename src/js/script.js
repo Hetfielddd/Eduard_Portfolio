@@ -1,34 +1,35 @@
-const hamburger = document.querySelector('.hamburger'),
-        menu = document.querySelector('.menu'),
-        closeElem = document.querySelector('.menu__close'),
-        overlayElem = document.querySelector('.menu__overlay'),
-        menuLink = document.querySelectorAll('.menu__link');
 
-hamburger.addEventListener('click', () => {
-    menu.classList.add('active');
-});
+  const hamburger = document.querySelector('.hamburger'),
+          menu = document.querySelector('.menu'),
+          closeElem = document.querySelector('.menu__close'),
+          overlayElem = document.querySelector('.menu__overlay'),
+          menuLink = document.querySelectorAll('.menu__link');
 
-closeElem.addEventListener('click', () => {
-    menu.classList.remove('active');
-});
+  hamburger.addEventListener('click', () => {
+      menu.classList.add('active');
+  });
 
-overlayElem.addEventListener('click', () => {
-    menu.classList.remove('active');
-});
+  closeElem.addEventListener('click', () => {
+      menu.classList.remove('active');
+  });
 
-menuLink.forEach((menuLink) => {
-    menuLink.addEventListener('click', () => {
-        menu.classList.remove('active');
-    });
-});
+  overlayElem.addEventListener('click', () => {
+      menu.classList.remove('active');
+  });
 
-    //a script for procentage
-const counters = document.querySelectorAll('.skills__stats-procentage'),
-        lines = document.querySelectorAll('.skills__stats-filled');
+  menuLink.forEach((menuLink) => {
+      menuLink.addEventListener('click', () => {
+          menu.classList.remove('active');
+      });
+  });
 
-counters.forEach((item, i) => {
-    lines[i].style.width = item.innerHTML;
-});
+      //a script for procentage
+  const counters = document.querySelectorAll('.skills__stats-procentage'),
+          lines = document.querySelectorAll('.skills__stats-filled');
+
+  counters.forEach((item, i) => {
+      lines[i].style.width = item.innerHTML;
+  });
 
 $(document).ready(function(){
     // Add smooth scrolling to all links
@@ -69,5 +70,61 @@ $(document).ready(function(){
           $('.sidepanel__bg').fadeOut();
         }
       });
+
+      //validate form
+      function validateForms(form) {
+        $(form).validate({
+          rules: {
+            name: {
+              required: true
+            },
+            email: {
+              required: true,
+              email: true
+            },
+            checkbox: {
+              required: true
+            }
+          },
+          messages: {
+            name: {
+              required: "*Write your name here",
+            },
+            email: {
+              required: "*Write your e-mail",
+              email: "*Write a real e-mail"
+            },
+            checkbox: {
+              required: "*This field is required"
+            }
+          }
+        });
+      };
+
+      validateForms('#contacts form');
+
+      //form sending
+      $("#contact_form").on('submit', function(e) {
+        e.preventDefault();
+      });
+
+      $('#contact_form').submit(function(e) {
+        e.preventDefault();
+        if (!$(this).valid()) {
+          return;
+        }
+        $.ajax({
+          type: "POST",
+          url: "mailer/smart.php",
+          data: $(this).serialize()
+        }).done(function() {
+          $(this).find("input").val("");
+          
+
+          $('form').trigger('reset');
+        });
+        return false;
+      });
+
 
 });
